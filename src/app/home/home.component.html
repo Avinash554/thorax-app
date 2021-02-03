@@ -1,0 +1,27 @@
+<h3 style="color: green;text-align: center;">API CALLED DATA USING ANGULAR</h3>
+ <!-- <pre>{{ newData | json}}</pre> -->
+ <!-- <ul>
+  <li *ngFor="let issues of newData">
+    {{ issues.title }}  {{ issues.number }}
+  </li>
+</ul> -->
+<div class="container">
+  <table class="center">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Number</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let issues of newData">
+        <td class="bg-primary">{{ issues.title }}</td>
+        <td class="table-secondary">
+          <a target="_blank" rel="noopener" href="{{ issues.url }}">{{ issues.number }}</a>
+        </td>
+        <td class="bg-primary">{{ issues.state }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
